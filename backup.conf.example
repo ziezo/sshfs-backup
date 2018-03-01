@@ -1,0 +1,10 @@
+#example backup.conf
+#on each line put backup file name + tar arguments, paths to backup
+#paths are relative to / - do NOT use starting / !! (eg use 'home' and not '/home')
+#lines starting with # and empty lines are ignored
+
+#backup /etc and /root to 20181231-hostname-etc+root.tgz 
+etc+root         etc root
+#backup /home excluding /home/user to 20181231-hostname-home-except-user.tgz
+home-ecxept-user  --exclude=home/user home
+
