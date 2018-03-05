@@ -18,7 +18,7 @@ echo "=> Backup started at $DATE"
 while IFS='' read -r LINE || [[ -n "$LINE" ]]; do
   NAME=$(echo $LINE | cut -f1 -d' ')
   ARGS=$(echo $LINE | cut -f2- -d' ')
-  if [ ${NAME:0:1} != '#' ] ; then
+  if [[ ${NAME:0:1} != '#' ]] ; then
     echo "tar -C /host -czf /backup/${DATE}-${HOSTNAME}-${NAME}.tgz $ARGS"
     tar -C /host -czf /backup/${DATE}-${HOSTNAME}-${NAME}.tgz $ARGS
   fi
