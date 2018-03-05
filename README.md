@@ -1,4 +1,4 @@
-## sshfe-backup
+## sshfs-backup
 
 Docker Hub: [ziezo/sshfs-backup](https://hub.docker.com/r/ziezo/sshfs-backup/)
 
